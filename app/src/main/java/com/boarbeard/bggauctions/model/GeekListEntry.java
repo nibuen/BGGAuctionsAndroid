@@ -40,6 +40,10 @@ public class GeekListEntry {
         return numpositive;
     }
 
+    public String getHref() {
+        return href;
+    }
+
     @Override
     public String toString() {
         return getId() + ": " + title;

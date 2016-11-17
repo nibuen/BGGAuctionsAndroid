@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">BGG Auctions</string>
+    <string name="geek_item_placeholder">Geek Item</string>
+    <string name="geek_bid_placeholder">$5.00</string>
 </resources>

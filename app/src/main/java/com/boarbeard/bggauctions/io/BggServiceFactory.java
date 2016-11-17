@@ -7,7 +7,7 @@ import retrofit2.adapter.rxjava2.RxJava2CallAdapterFactory;
 import retrofit2.converter.gson.GsonConverterFactory;
 import retrofit2.converter.simplexml.SimpleXmlConverterFactory;
 
-public class Adapter {
+public class BggServiceFactory {
 	public static BggService createForXml() {
 		Retrofit.Builder builder = createBuilderWithoutConverterFactory(null);
 		builder.addConverterFactory(SimpleXmlConverterFactory.createNonStrict());
@@ -24,6 +24,7 @@ public class Adapter {
 	public static BggService createForJson() {
 		Retrofit.Builder builder = createBuilderWithoutConverterFactory(null);
 		builder.addConverterFactory(GsonConverterFactory.create());
+		builder.addCallAdapterFactory(RxJava2CallAdapterFactory.create());
 		return builder.build().create(BggService.class);
 	}
 
