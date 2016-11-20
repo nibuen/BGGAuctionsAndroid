@@ -13,14 +13,28 @@ import org.simpleframework.xml.ElementList;
 import org.simpleframework.xml.Root;
 
 import java.text.SimpleDateFormat;
+import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
 import java.util.Locale;
+import java.util.Map;
 
 @Root(name = "geeklist")
 public class GeekList implements Parcelable {
 	private static final SimpleDateFormat FORMAT = new SimpleDateFormat("EEE, dd MMM yyyy HH:mm:ss Z", Locale.US);
 	private long mPostDateTime = DateTimeUtils.UNPARSED_DATE;
 	private long mEditDateTime = DateTimeUtils.UNPARSED_DATE;
+
+	/**
+	 * An array of sample (dummy) items.
+	 */
+	public static final List<GeekList> ITEMS = new ArrayList<>();
+
+	/**
+	 * A map of sample (dummy) items, by ID.
+	 */
+	public static final Map<String, GeekList> ITEM_MAP = new HashMap<String, GeekList>();
+
 
 	public GeekList() {
 	}

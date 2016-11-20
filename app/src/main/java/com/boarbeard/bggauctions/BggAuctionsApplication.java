@@ -5,7 +5,7 @@ import android.os.StrictMode;
 
 import timber.log.Timber;
 
-public class BggApplication extends Application {
+public class BggAuctionsApplication extends Application {
 	@Override
 	public void onCreate() {
 		super.onCreate();
